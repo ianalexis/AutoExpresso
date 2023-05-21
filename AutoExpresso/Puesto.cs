@@ -4,5 +4,10 @@
     {
         private int id; //comentario
         private TipoServicio tipo;
+
+        public double calcularPresupuesto
+        {
+
+        }
     }
 }
