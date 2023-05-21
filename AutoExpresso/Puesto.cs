@@ -2,7 +2,7 @@
 {
     public class Puesto
     {
-        private int id;
+        private int id; //comentario
         private TipoServicio tipo;
     }
 }
