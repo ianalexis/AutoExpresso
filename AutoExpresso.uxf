@@ -1,4 +1,4 @@
-<diagram program="umletino" version="15.1"><zoom_level>12</zoom_level><element><id>UMLClass</id><coordinates><x>528</x><y>315</y><w>252</w><h>276</h></coordinates><panel_attributes>/Vehiculo/
+<diagram program="umletino" version="15.1"><zoom_level>12</zoom_level><element><id>UMLClass</id><coordinates><x>456</x><y>504</y><w>252</w><h>276</h></coordinates><panel_attributes>Vehiculo
 --
 -id:int
 -marca:String
@@ -6,22 +6,7 @@
 -año:int
 -matricula:String
 --
-+Vehiculo()
-/+calcularPresupuesto(double, double): double/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>876</x><y>3</y><w>252</w><h>228</h></coordinates><panel_attributes>TipoService // asignar valores
---
-_+CAMBIO_DE_ACEITE_
-_+ALINEACIÓN_
-_+BALANCEO_
-_+SERVICE_BASICO_
-_+REVISION_VTV_
-_+CAMBIO_BATERIA_</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>876</x><y>315</y><w>252</w><h>168</h></coordinates><panel_attributes>EstadoService // veremos
---
-_+INGRESADO_
-_+PRESUPUESTADO_
-_+EN_SERVICIO_
-_+PENDIENTE_ENTREGA_
-_+ENTREGADO_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>768</x><y>183</y><w>132</w><h>192</h></coordinates><panel_attributes>-estado
-lt=&lt;-</panel_attributes><additional_attributes>90;140;40;140;40;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>132</x><y>315</y><w>252</w><h>276</h></coordinates><panel_attributes>Propietario
++Vehiculo()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>96</x><y>504</y><w>252</w><h>156</h></coordinates><panel_attributes>Propietario
 --
 -documento:int
 -nombre:String
@@ -29,44 +14,34 @@ lt=&lt;-</panel_attributes><additional_attributes>90;140;40;140;40;10;10;10</add
 -correo:String
 --
 +Propietario()
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>372</x><y>411</y><w>180</w><h>60</h></coordinates><panel_attributes>-propietario
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>336</x><y>552</y><w>144</w><h>60</h></coordinates><panel_attributes>-propietario
 lt=&lt;-
-m1=1</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>216</x><y>651</y><w>252</w><h>276</h></coordinates><panel_attributes>Moto
+m1=1</panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>456</x><y>180</y><w>264</w><h>228</h></coordinates><panel_attributes>Taller
 --
-_-F_MAT: double = 0.75_
-_-F_DIF:double = 1_
+_PUESTOS_MAXIMOS=5:_
 --
-+calcularPresupuesto(): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>528</x><y>651</y><w>252</w><h>276</h></coordinates><panel_attributes>Auto
---
-_-F_MAT: double = 1_
-_-F_DIF:double = 1_
---
-+calcularPresupuesto(): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>852</x><y>651</y><w>252</w><h>276</h></coordinates><panel_attributes>Camioneta
---
-_-F_MAT: double = 2_
-_-F_DIF:double = 3_
---
-+calcularPresupuesto(): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>336</x><y>579</y><w>288</w><h>96</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>220;10;220;40;10;40;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>708</x><y>579</y><w>300</w><h>96</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;230;40;230;60</additional_attributes></element><element><id>Relation</id><coordinates><x>648</x><y>579</y><w>36</w><h>96</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>132</x><y>3</y><w>252</w><h>228</h></coordinates><panel_attributes>Taller
---
---
-+confirmacionServListo():boolean
 +altaDeVehiculo():void
 +buscarVehiculo(int):Vehiculo
-+buscarVehiculo(String):Vehiculo</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>528</x><y>3</y><w>252</w><h>228</h></coordinates><panel_attributes>Servicio
++buscarVehiculo(String):Vehiculo
++completarServicio(Puesto):void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>876</x><y>180</y><w>252</w><h>228</h></coordinates><panel_attributes>Puesto
 --
 id:int
 --
 +calcularPresupuesto():double
-+rechazarPresupuesto():void
-+aceptarPresupuesto():void
-+completarServicio():void
 +entregarVehiculo():Vehiculo
 +mostrarEstado():void
-+pendienteEntrega():boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>768</x><y>87</y><w>132</w><h>48</h></coordinates><panel_attributes>-tipo
-lt=&lt;-</panel_attributes><additional_attributes>90;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>372</x><y>87</y><w>180</w><h>60</h></coordinates><panel_attributes>-servicios
++pendienteEntrega():boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>996</x><y>396</y><w>60</w><h>132</h></coordinates><panel_attributes>-tipo
+lt=&lt;..</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>708</x><y>264</y><w>192</w><h>60</h></coordinates><panel_attributes>-Puestos
 lt=&lt;-
-m1=*</panel_attributes><additional_attributes>130;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>648</x><y>219</y><w>96</w><h>120</h></coordinates><panel_attributes>-vehiculo
+m1=5</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>360</y><w>240</w><h>168</h></coordinates><panel_attributes>-vehiculo
 lt=&lt;-
-m1=1</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>372</x><y>195</y><w>180</w><h>192</h></coordinates><panel_attributes>-vehiculo
+m1=1</panel_attributes><additional_attributes>10;120;10;90;120;90;120;10;180;10</additional_attributes></element><element><id>Relation</id><coordinates><x>564</x><y>396</y><w>108</w><h>132</h></coordinates><panel_attributes>-vehiculos
 lt=&lt;-
-m1=1</panel_attributes><additional_attributes>130;130;70;130;70;10;10;10</additional_attributes></element></diagram>
+m1=*</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>876</x><y>504</y><w>252</w><h>228</h></coordinates><panel_attributes>TipoServico // agregar monto enmum
+--
+_+CAMBIO_DE_ACEITE_
+_+ALINEACIÓN_
+_+BALANCEO_
+_+SERVICE_BASICO_
+_+REVISION_VTV_
+_+CAMBIO_BATERIA_</panel_attributes><additional_attributes></additional_attributes></element></diagram>
