@@ -4,7 +4,7 @@ namespace Test
 {
     public class Taller
     {
-        public static int PUESTOS_MAXIMOS = 5; // Final???
+        public const int PUESTOS_MAXIMOS = 5; // Final???
         private List<Puesto> puestos;
         private List<Vehiculo> vehiculos;
 
